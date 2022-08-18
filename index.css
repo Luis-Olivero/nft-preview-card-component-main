@@ -1,0 +1,152 @@
+:root {
+    /* Primary Colors */
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    /* Neutral Colors */
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    /* Fonts */
+    --Outfit: 'Outfit', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+image {
+    max-width: 100%;
+}
+
+body {
+    background-color: var(--Very-dark-blue-main-BG);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+footer {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 2.5em;
+}
+
+.card {
+    background-color: var(--Very-dark-blue-card-BG);
+    margin: auto;
+    width: 90%;
+    padding-top: .50em;
+    border-radius: 20px;
+}
+
+.card__img {
+    display: flex;
+    justify-content: center;
+    padding-top: 1em;
+}
+
+.card__img img {
+    width: 85%;
+    border-radius: 20px;
+}
+
+.card__body {
+    width: 90%;
+    margin: 0 auto;
+    font-family: var(--Outfit);
+}
+
+.card__text--title {
+    color: var(--White);
+    font-size: 1.5rem;
+}
+
+.card__text--p {
+    color: var(--Soft-blue);
+}
+
+.card__icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__icons--1 {
+    color: var(--Cyan);
+}
+
+.card__icons--2 {
+    color: var(--Soft-blue);
+}
+
+.icon {
+    padding-right: 1em;
+}
+
+/* .blue-line {
+    background-color: var(--Very-dark-blue-line);
+} */
+
+.card__profile {
+    display: flex;
+    justify-content: flex-start;
+    color: var(--White);
+    padding: 1em 1em 1em 0;
+}
+
+.card__profile--img {
+    border: 1px solid var(--White);
+    border-radius: 70px;
+    width: 20%;
+}
+
+.card__profile--text {
+    padding-left: 1em;
+}
+
+.color-variation {
+    color: var(--Soft-blue);
+}
+
+.attribution {
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--White);
+}
+
+.attribution a {
+    text-decoration: none;
+    color: var(--White);
+
+}
+
+.attribution a:hover {
+    color: var(--Very-dark-blue-main-BG);
+}
+
+.attribution a:visited {
+    color: var(--Soft-blue);
+}
+
+@media (min-width: 650px) {
+
+    .container {
+        max-width: 600px;
+    }
+
+    .card {
+        
+    }
+
+}
