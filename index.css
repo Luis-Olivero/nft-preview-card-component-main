@@ -44,24 +44,53 @@ footer {
 .card {
     background-color: var(--Very-dark-blue-card-BG);
     margin: auto;
-    width: 90%;
-    padding-top: .50em;
-    border-radius: 20px;
+    width: min(100%, 21.85rem);    
+    padding: 1.5em;
+    border-radius: 1rem;
 }
 
 .card__img {
-    display: flex;
-    justify-content: center;
-    padding-top: 1em;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+}
+
+.card__img * {
+    border-radius: 1rem;
 }
 
 .card__img img {
-    width: 85%;
-    border-radius: 20px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card__img .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: hsla(178deg, 100%, 50%, 0.5);
+    opacity: 0;
+    display: grid;
+    place-content: center;
+    transition: opacity 200ms ease-in-out;
+}
+
+.card__img .overlay img {
+    width: 3rem;
+    height: 2rem;
+}
+
+.card__img .overlay:hover {
+    opacity: 1;
 }
 
 .card__body {
-    width: 90%;
     margin: 0 auto;
     font-family: var(--Outfit);
 }
@@ -77,41 +106,49 @@ footer {
 
 .card__icons {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    gap: 0.45rem;
 }
 
 .card__icons--1 {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
     color: var(--Cyan);
 }
 
 .card__icons--2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     color: var(--Soft-blue);
 }
 
-.icon {
+/* .icon {
     padding-right: 1em;
-}
-
-/* .blue-line {
-    background-color: var(--Very-dark-blue-line);
 } */
+
+.blue-line {
+    opacity: 0.4;
+}
 
 .card__profile {
     display: flex;
-    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
     color: var(--White);
-    padding: 1em 1em 1em 0;
 }
 
 .card__profile--img {
+    width: 2rem;
+    border-radius: 50%;
     border: 1px solid var(--White);
-    border-radius: 70px;
-    width: 20%;
 }
 
-.card__profile--text {
-    padding-left: 1em;
-}
+/* .card__profile--text {
+    letter-spacing: 0.01rem;
+} */
 
 .color-variation {
     color: var(--Soft-blue);
@@ -145,8 +182,8 @@ footer {
         max-width: 600px;
     }
 
-    .card {
+    /* .card {
         
-    }
+    } */
 
 }
